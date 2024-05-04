@@ -7,7 +7,7 @@ function SMDashboard({ toggleLoading }) {
   useEffect(() => {
     const fetchReportCount = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/sm/count");
+        const response = await fetch(`${process.env.React_App_Backend_URL}/api/sm/count`);
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -27,7 +27,7 @@ function SMDashboard({ toggleLoading }) {
   useEffect(() => {
     const fetchRecordCount = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/sm/records/count");
+        const response = await fetch(`${process.env.React_App_Backend_URL}/api/sm/records/count`);
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -47,7 +47,7 @@ function SMDashboard({ toggleLoading }) {
   useEffect(() => {
     const fetchQuotationCount = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/sm/quotations/count");
+        const response = await fetch(`${process.env.React_App_Backend_URL}/api/sm/quotations/count`);
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
